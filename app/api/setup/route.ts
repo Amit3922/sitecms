@@ -3,6 +3,10 @@ import { getAdminAuth, getAdminDb } from "@/lib/firebase/admin"
 import { getSessionUser } from "@/lib/firebase/session"
 import { FieldValue } from "firebase-admin/firestore"
 
+export async function GET() {
+  return POST()
+}
+
 export async function POST() {
   const db = getAdminDb()
 
