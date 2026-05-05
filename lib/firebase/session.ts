@@ -16,6 +16,6 @@ export async function getSessionUser() {
 }
 
 export async function isAdmin(uid: string): Promise<boolean> {
-  const doc = await adminDb.collection("FQNBAfSWd1YeYnoe5mqftwFC1nL2").doc(uid).get()
+  const doc = await adminDb.collection("admins").doc(uid).get()
   return doc.exists
 }
